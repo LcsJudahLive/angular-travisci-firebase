@@ -3,6 +3,10 @@ language: node_js
 node_js:
   - node
 
+branches:
+  - master
+  - /^greenkeeper/.*$/
+
 before_script:
   - npm install -g --silent firebase-tools
   - npm install -g --silent @angular/cli
