@@ -15,7 +15,7 @@ script:
   - ng build --prod
 
 after_success:
-  - firebase deploy --token $FIREBASE_TOKEN --non-interactive 
+  - firebase deploy --token $FIREBASE_TOKEN --non-interactive --project angular-travisci-firebas-91a37
 
 notifications:
   email:
