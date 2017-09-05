@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-	- node
+  - node
 
 branches:
   only:
@@ -9,15 +9,15 @@ branches:
 
 before_script:
   - npm install -g --silent firebase-tools
-	- npm install -g --silent @angular/cli
+  - npm install -g --silent @angular/cli
 
 script:
-	- ng build --prod
+  - ng build --prod
 
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN --non-interactive 
 
 notifications:
-	email:
-		on_failure: change
-		on_success: change
+  email:
+    on_failure: change
+    on_success: change
